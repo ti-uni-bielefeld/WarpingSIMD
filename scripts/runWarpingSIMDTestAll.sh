@@ -26,6 +26,7 @@
 # ===========================================================================
 
 set path = ( . $path )
+set warpingSIMDTestBin = "build/src/test/warpingSIMDTest"
 
 # dryRun=1: don't compute home vectors
 set dryRun = 0
@@ -63,12 +64,12 @@ setenv nPsi 128
 mkdir -p TEST
 # print base parameter (pixelScale, postScale changed below!), 
 # add comment char
-warpingSIMDTest |& grep -e PARAMETER | sed 's/^/#\ /'
+$warpingSIMDTestBin |& grep -e PARAMETER | sed 's/^/#\ /'
 echo "\n"
 # go through list of database extensions for current views
 foreach base ($baseList)
     #  9. May 18 (rm): automatically adjust scaling
-    set scaling = (`warpingSIMDTest p $base $ssAuto $cvAuto $suffix $bw |& grep SCALING`)
+    set scaling = (`$warpingSIMDTestBin p $base $ssAuto $cvAuto $suffix $bw |& grep SCALING`)
     setenv pixelScale $scaling[6]
     setenv postScale $scaling[8]
     echo "# base = $base, pixelScale = $pixelScale, postScale = $postScale"
@@ -78,7 +79,7 @@ foreach base ($baseList)
 	    echo "# $allMode $base $ss $cv $suffix $bw $gridStep $boxRad $pixelScale $postScale"
 	    # -e ALL -e DBINFO
 	    if ( !($dryRun) ) then
-		warpingSIMDTest $allMode $base $ss $cv $suffix $bw \
+		$warpingSIMDTestBin $allMode $base $ss $cv $suffix $bw \
 		    $gridStep $boxRad \
 		    |& grep -e RESULTS
 	    endif

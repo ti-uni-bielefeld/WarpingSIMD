@@ -28,6 +28,7 @@
 # TODO: automatic computation of pixelScale?
 
 set path = ( . $path )
+set warpingSIMDTestBin = "build/src/test/warpingSIMDTest"
 
 # database base name
 set base = "living3"
@@ -61,7 +62,7 @@ mkdir -p TEST
 foreach cv ("day" "night")
     # run warpingSIMDTest in mode "s"
     echo "l $base $ss $cv $suffix $bw $ssx $ssy"
-    warpingSIMDTest l $base $ss $cv $suffix $bw $ssx $ssy
+    $warpingSIMDTestBin l $base $ss $cv $suffix $bw $ssx $ssy
     # generate same gnuplot filename as done by warpingSIMDTest
     set gpFile = \
       "./TEST/dissim_${base}_${ss}_${cv}_${suffix}_${bw}_${ssx}_${ssy}.gp"

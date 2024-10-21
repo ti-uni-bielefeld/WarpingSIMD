@@ -26,6 +26,7 @@
 # ===========================================================================
 
 set path = ( . $path )
+set warpingSIMDTestBin = "build/src/test/warpingSIMDTest"
 
 # database suffix
 # set suffix = "Hh1152sh"
@@ -42,7 +43,7 @@ setenv nPsi 128
 foreach distMeas (0 1 2 3 4 5 6 7)
     setenv firstPhase $distMeas
     foreach base ("living1" "living2" "living3" "living4")
-	warpingSIMDTest p $base day night $suffix $bw
+	$warpingSIMDTestBin p $base day night $suffix $bw
     end
 end
 

@@ -26,6 +26,7 @@
 # ===========================================================================
 
 set path = ( . $path )
+set warpingSIMDTestBin = "build/src/test/warpingSIMDTest"
 
 # set base = "lab_quarterres"
 # # set base = "4walls_1"
@@ -115,7 +116,7 @@ setenv nPsi 128
 mkdir -p TEST
 
 #  4. Jun 18 (rm): automatically adjust scaling
-set scaling = (`warpingSIMDTest p $base $ssAuto $cvAuto $suffix $bw |& grep SCALING`)
+set scaling = (`$warpingSIMDTestBin p $base $ssAuto $cvAuto $suffix $bw |& grep SCALING`)
 setenv pixelScale $scaling[6]
 setenv postScale $scaling[8]
 echo "# base = $base, pixelScale = $pixelScale, postScale = $postScale"
@@ -124,7 +125,7 @@ echo "# base = $base, pixelScale = $pixelScale, postScale = $postScale"
 foreach cv ($cvList)
     # run warpingSIMDTest in mode "s"
     # echo "s $base $ss $cv $suffix $bw $ssx $ssy"
-    warpingSIMDTest s $base $ss $cv $suffix $bw $ssx $ssy
+    $warpingSIMDTestBin s $base $ss $cv $suffix $bw $ssx $ssy
     # generate same gnuplot filename as done by warpingSIMDTest
     set gpFile = \
       "./TEST/homevectors_${base}_${ss}_${cv}_${suffix}_${bw}_${ssx}_${ssy}.gp"
@@ -141,6 +142,6 @@ foreach cv ($cvList)
            '""' i 1 ls 7 lw 3 ',' \
 	   '"'$gpTrueFile'"' i 1 ls 2 ';' \
       pause -1 '"'Press ET'"' | \
-      cat "homevectors.gp" - > $gpPlotFile
+      cat "scripts/homevectors.gp" - > $gpPlotFile
       gnuplot $gpPlotFile
 end

@@ -26,6 +26,7 @@
 # ===========================================================================
 
 set path = ( . $path )
+set warpingSIMDTestBin = "build/src/test/warpingSIMDTest"
 
 # database base names list
 set baseList = "living1 living2 living3 living4"
@@ -69,14 +70,14 @@ foreach cv ($cvList)
     foreach base ($baseList)
 	foreach bw ($bwList)
 	    # 29. Jul 18 (rm): automatically adjust scaling
-	    set scaling = (`warpingSIMDTest p $base $ssAuto $cvAuto $suffix $bw |& grep SCALING`)
+	    set scaling = (`$warpingSIMDTestBin p $base $ssAuto $cvAuto $suffix $bw |& grep SCALING`)
 	    setenv pixelScale $scaling[6]
 	    setenv postScale $scaling[8]
 	    echo "# base = $base, pixelScale = $pixelScale, postScale = $postScale"
 	    # run warpingSIMDTest in mode "a"
 	    echo "a $base $ss $cv $suffix $bw $gridStep $boxRad"
 	    # -e ALL -e DBINFO 
-	    warpingSIMDTest a $base $ss $cv $suffix $bw $gridStep $boxRad \
+	    $warpingSIMDTestBin a $base $ss $cv $suffix $bw $gridStep $boxRad \
 		|& grep -e RESULTS
 	end
 	echo ""
