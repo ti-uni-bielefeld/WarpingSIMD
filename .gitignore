@@ -1,5 +1,7 @@
 .vscode/
 build*/
+DATA*/
+TEST/
 *.tmp
 *.o
 *.ilk
