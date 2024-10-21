@@ -28,12 +28,11 @@
 #define MINWARPING_SEARCHRANGE_H_
 
 #include "SIMDImage.H"
-// 20. Apr 18 (rm): thanks to Benedikt Volkmer
-#include "SIMDVecAll.H"
 
 #include <algorithm>
 #include <cmath>
 #include <cstddef>
+#include <tsimd.H> // 20. Apr 18 (rm): thanks to Benedikt Volkmer
 #include <vector>
 
 namespace simd {

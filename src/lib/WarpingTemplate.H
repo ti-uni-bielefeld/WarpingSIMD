@@ -28,7 +28,6 @@
 #define WARPING_TEMPLATE_H_
 
 #include "MinWarpingTemplate.H" // uses initializeScaleFactorsAndThresholds
-#include "SIMDDefs.H"
 #include "SIMDException.H"
 #include "SIMDImage.H"
 
@@ -36,6 +35,7 @@
 #include <limits>
 #include <stdint.h>
 #include <stdio.h>
+#include <tsimd.H>
 #include <vector>
 
 namespace simd {

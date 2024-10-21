@@ -31,7 +31,6 @@
 // #define SHARED_SIMD_PTR_HEAP_COUNT
 
 #include "MinWarpingSearchCollection.H"
-#include "SIMDExperimental.H"
 #include "SIMDImageFunctions.H"
 #include "WarpingBundle.H"
 #include "WarpingCompound.H"

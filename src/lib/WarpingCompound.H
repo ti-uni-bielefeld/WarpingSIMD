@@ -32,7 +32,6 @@
 #include "MinWarpingSearch.H"
 #include "MinWarpingTemplate.H"
 #include "SIMDException.H"
-#include "SIMDExperimental.H"
 #include "SIMDImage.H"
 #include "WarpingParameter.H"
 #include "WarpingSPS.H"

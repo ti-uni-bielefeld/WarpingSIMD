@@ -28,12 +28,12 @@
 #define SIMD_IMAGE_FUNCTIONS_H_
 
 #include "SIMDImage.H"
-#include "SIMDVecAll.H"
 #include "saturate_cast.H"
 
 #include <algorithm>
 #include <cstddef>
 #include <math.h>
+#include <tsimd.H>
 #include <vector>
 
 /**

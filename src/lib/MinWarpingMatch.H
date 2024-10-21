@@ -29,12 +29,9 @@
 
 #include "SIMDImage.H"
 
-// 20. Apr 18 (rm): thanks to Benedikt Volkmer
-#include "SIMDTypes.H"
-#include "SIMDVecAll.H"
-
 #include <cstddef>
 #include <limits>
+#include <tsimd.H>
 
 namespace simd {
 

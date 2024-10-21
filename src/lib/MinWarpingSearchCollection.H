@@ -29,11 +29,10 @@
 
 #include "MinWarpingSearch.H"
 #include "SIMDException.H"
-#include "SIMDTypes.H"
-#include "SIMDVecAll.H"
 
 #include <cstddef>
 #include <limits>
+#include <tsimd.H>
 #include <vector>
 
 namespace simd {

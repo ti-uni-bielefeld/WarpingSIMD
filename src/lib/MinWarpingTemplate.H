@@ -27,8 +27,6 @@
 #ifndef MINWARPING_TEMPLATE_H_
 #define MINWARPING_TEMPLATE_H_
 
-// 20. Apr 18 (rm): thanks to Benedikt Volkmer
-#include "SIMDDefs.H"
 #include "SIMDException.H"
 #include "SIMDImage.H"
 
@@ -37,6 +35,7 @@
 #include <limits>
 #include <stdint.h>
 #include <stdio.h>
+#include <tsimd.H> // 20. Apr 18 (rm): thanks to Benedikt Volkmer
 #include <vector>
 
 // 20. Sep 22 (Jonas Keller): on Windows M_PI is not defined, so we

@@ -27,11 +27,8 @@
 #ifndef SATURATE_CAST_H
 #define SATURATE_CAST_H
 
-// SIMD typedefs and TypeInfo
-#include "SIMDTypes.H"
-
-// std::min and std::max
-#include <algorithm>
+#include <algorithm> // std::min and std::max
+#include <tsimd.H>   // SIMD typedefs and TypeInfo
 
 // WarpingSIMD / SIMDImage namespace
 namespace simd {

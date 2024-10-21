@@ -28,11 +28,11 @@
 #define WARPING_PARAMETER_H_
 
 #include "SIMDException.H"
-#include "SIMDVecAll.H"
 
 #include <cmath>
 #include <cstddef>
 #include <string.h>
+#include <tsimd.H>
 
 // 20. Sep 22 (Jonas Keller): on Windows M_PI is not defined, so we
 // define it here

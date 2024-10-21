@@ -27,10 +27,10 @@
 #ifndef WARPING_SEARCH_COLLECTION_H_
 #define WARPING_SEARCH_COLLECTION_H_
 
-#include "SIMDTypes.H"
 #include "WarpingSearch.H"
 
 #include <cstddef>
+#include <tsimd.H>
 
 namespace simd {
 

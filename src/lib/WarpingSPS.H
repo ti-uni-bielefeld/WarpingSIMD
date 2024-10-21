@@ -28,12 +28,12 @@
 #define WARPING_SPS_H_
 
 #include "SIMDImage.H"
-#include "SIMDVecAll.H"
 #include "WarpingParameter.H"
 
 #include <cstddef>
 #include <stdio.h>
 #include <string.h>
+#include <tsimd.H>
 
 namespace simd {
 

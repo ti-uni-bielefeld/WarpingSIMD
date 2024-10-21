@@ -29,11 +29,11 @@
 
 #include "SIMDException.H"
 #include "SIMDImage.H"
-#include "SIMDVecAll.H"
 #include "WarpingSPS.H"
 
 #include <cstddef>
 #include <limits>
+#include <tsimd.H>
 #include <vector>
 
 namespace simd {

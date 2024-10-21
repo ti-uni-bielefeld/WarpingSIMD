@@ -27,7 +27,6 @@
 #ifndef SHARED_SIMD_PTR_H_
 #define SHARED_SIMD_PTR_H_
 
-#include "SIMDAlloc.H"
 #include "SIMDException.H"
 
 #include <assert.h>
@@ -36,6 +35,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <tsimd.H>
 
 #ifdef SHARED_SIMD_PTR_DEBUG_ON
 #define SHARED_SIMD_PTR_DEBUG(ACTION) ACTION
