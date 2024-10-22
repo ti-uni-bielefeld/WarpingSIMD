@@ -176,8 +176,7 @@ endif
 
 .PHONY: clean
 clean:
-	@echo "removing build directory \"$(build_dir)\" and documentation directory \"docs/html\""
-	@$(RMDIR_R) docs/html >$(NULL) 2>&1
+	@echo "removing build directory \"$(build_dir)\""
 	@$(RMDIR_R) $(build_dir) >$(NULL) 2>&1
 
 .PHONY: info
