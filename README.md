@@ -23,3 +23,4 @@ Their specific contributions are mentioned in the source files. Thanks a lot to 
 If you find any bugs or errors in **WarpingSIMD**, please [open an issue on GitHub](https://github.com/ti-uni-bielefeld/WarpingSIMD/issues).
 
 Alternatively, or for other inquiries, contact [Ralf Möller](http://www.ti.uni-bielefeld.de/html/people/moeller/) (moeller@ti.uni-bielefeld.de).
+
