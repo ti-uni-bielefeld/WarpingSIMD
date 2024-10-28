@@ -29,11 +29,7 @@
 // and double search; for all alternatives, see warpingSIMDTest.C. No
 // random azimuthal rotation is applied to the input images.
 
-#include "MinWarpingSearchCollection.H"
-#include "SIMDImageFunctions.H"
-#include "WarpingCompound.H"
-#include "WarpingSPSComputationCollection.H"
-#include "WarpingSearchCollection.H"
+#include "WarpingSIMD.H"
 
 #include <assert.h>
 #include <cmath>
@@ -44,6 +40,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <tsimd.H>
 #include <vector>
 
 using namespace ns_simd;

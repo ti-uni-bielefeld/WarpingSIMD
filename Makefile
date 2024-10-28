@@ -37,6 +37,8 @@ depend_files = $(addsuffix .d,$(binaries))
 
 objects      = $(addsuffix .o,$(binaries))
 
+single_header_file = WarpingSIMD.H
+
 #===========================================================================
 # definitions and flags
 #===========================================================================
@@ -213,5 +215,13 @@ dep:
 format:
 	@echo "formatting all .C and .H files in src/"
 	@./scripts/format_cpp.sh src
+
+# uses quom (https://github.com/Viatorus/quom)
+.PHONY: single-header
+single-header: format
+	@echo "generating warpingsimd single header file"
+	@$(MKDIR) $(build_dir)
+	@./scripts/generate_single-header.sh $(build_dir)/$(single_header_file)
+	@echo "single header written to $(build_dir)/$(single_header_file)"
 
 -include $(addprefix $(build_dir)/,$(depend_files))

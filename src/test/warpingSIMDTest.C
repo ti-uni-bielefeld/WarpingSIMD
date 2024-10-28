@@ -30,13 +30,7 @@
 // #define SIMD_IMAGE_DEBUG_ON
 // #define SHARED_SIMD_PTR_HEAP_COUNT
 
-#include "MinWarpingSearchCollection.H"
-#include "SIMDImageFunctions.H"
-#include "WarpingBundle.H"
-#include "WarpingCompound.H"
-#include "WarpingFactories.H"
-#include "WarpingSPSComputationCollection.H"
-#include "WarpingSearchCollection.H"
+#include "WarpingSIMD.H"
 
 #include <assert.h>
 #include <cmath>
@@ -46,6 +40,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
+#include <tsimd.H>
 #include <vector>
 
 // ===========================================================================

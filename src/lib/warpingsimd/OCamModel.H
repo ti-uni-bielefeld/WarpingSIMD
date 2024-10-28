@@ -37,12 +37,11 @@
 #include <exception>
 // size_t
 #include <cstddef>
+#include <tsimd.H>
 
 // Transformation matrices
 #include "TransformMatrix.H"
 
-// SIMD typedefs and TypeInfo
-#include "SIMDTypes.H"
 // SIMD Image type
 #include "SIMDImage.H"
 // Functions operating on SIMDImages

@@ -6,6 +6,16 @@ MinWarping and 2D-Warping take two panoramic images captured at different positi
 
 For further information on **WarpingSIMD**, including related papers, videos, and image databases see https://www.ti.uni-bielefeld.de/html/people/moeller/tsimd_warpingsimd.html.
 
+## Dependencies
+
+**WarpingSIMD** depends on the [**T-SIMD** library](https://github.com/ti-uni-bielefeld/T-SIMD).
+
+## Download and Usage
+
+Download the latest release of **WarpingSIMD** from the [WarpingSIMD GitHub releases page](https://github.com/ti-uni-bielefeld/WarpingSIMD/releases) as well as the latest release of the **T-SIMD** library from the [T-SIMD GitHub releases page](https://github.com/ti-uni-bielefeld/T-SIMD/releases).
+
+The easiest way to use **WarpingSIMD** is to download and include the single-header version `WarpingSIMD.H` as well as the single-header version `tsimd.H` of **T-SIMD** in your project.
+
 ## License
 
 This software is distributed based on a specific **license agreement**, please see the file [LICENSE.md](LICENSE.md).

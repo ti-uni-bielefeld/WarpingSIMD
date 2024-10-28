@@ -16,9 +16,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install quom
+        run: sudo pip3 install quom
+      - name: Install clang-format
+        run: sudo pip3 install clang-format
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Make single header
+        run: make single-header
       - name: Prepare Release
         uses: softprops/action-gh-release@v2
         with:
+          files: build/WarpingSIMD.H
           draft: true
           generate_release_notes: true
           make_latest: true
