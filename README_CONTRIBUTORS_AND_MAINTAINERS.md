@@ -8,6 +8,10 @@ Contributions to the **WarpingSIMD** library are welcome. Please follow the foll
 - Open an [issue](https://github.com/ti-uni-bielefeld/WarpingSIMD/issues) or [pull request](https://github.com/ti-uni-bielefeld/WarpingSIMD/pulls) on the GitHub repository for any suggestions, bug reports, or contributions.
 - Format the code as described in the [Formatting](#formatting) section before contributing.
 
+## Developing in parallel with T-SIMD
+
+For developing **WarpingSIMD** in parallel with **T-SIMD** without needing to regenerate the **T-SIMD** single header, the include pointing to `external/` can be changed to point to the `src/lib/tsimd/` directory in the **T-SIMD** repository. Remember not to commit this change or change it back before committing.
+
 ## Formatting
 
 The code is formatted with `clang-format` version 16 or newer (https://clang.llvm.org/docs/ClangFormat.html, https://releases.llvm.org/download.html) using the configuration file `.clang-format`.

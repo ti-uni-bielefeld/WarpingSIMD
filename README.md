@@ -16,6 +16,10 @@ Download the latest release of **WarpingSIMD** from the [WarpingSIMD GitHub rele
 
 The easiest way to use **WarpingSIMD** is to download and include the single-header version `WarpingSIMD.H` as well as the single-header version `tsimd.H` of **T-SIMD** in your project.
 
+## Contributing and Maintaining
+
+For notes on contributing to and maintaining **WarpingSIMD**, see [README_CONTRIBUTORS_AND_MAINTAINERS.md](README_CONTRIBUTORS_AND_MAINTAINERS.md).
+
 ## License
 
 This software is distributed based on a specific **license agreement**, please see the file [LICENSE.md](LICENSE.md).

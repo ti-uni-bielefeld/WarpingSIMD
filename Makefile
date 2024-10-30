@@ -121,6 +121,8 @@ flags_cppstd  ?= $(userdefs_cppstd)
 flags_cpp      = $(flags_c) $(userdefs_cpp) $(flags_cppstd) $(crt_sec_features_flags)
 flags_arch    ?= $(userdefs_arch)
 flags_depends  = -MMD -MP
+# change -I./external to point to the T-SIMD library for developing WarpingSIMD in parallel with the T-SIMD library
+# see README_CONTRIBUTORS_AND_MAINTAINERS.md for more information
 flags_includes = -I./src/lib -I./external
 
 # os dependent definitions
